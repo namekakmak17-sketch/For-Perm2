@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Itim", cursive;
+  background: linear-gradient(135deg, #ffe4ef, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px; /* สำคัญมากสำหรับมือถือ */
+}
+
+audio {
+  display: none;
+}
+
+/* ====== กล่องหลัก ====== */
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 360px; /* พอดีมือถือ */
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 28px 22px 32px;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(255, 105, 180, 0.28);
+}
+
+/* ====== หัวข้อ ====== */
+h1 {
+  font-size: 24px;
+  color: #ff6f9f;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+/* ====== ข้อความ ====== */
+p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin: 10px 0 18px;
+}
+
+.sorry-text {
+  font-family: "Mali", cursive;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* ====== รูป ====== */
+.main-img {
+  width: 180px;
+  max-width: 100%;
+  margin: 16px auto;
+  display: block;
+  animation: float 2.4s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ====== ปุ่ม ====== */
+.main-btn {
+  width: 100%;
+  border: none;
+  background: linear-gradient(135deg, #ff8fb3, #ff5f8f);
+  color: white;
+  padding: 14px 0;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 18px rgba(255, 95, 143, 0.35);
+}
+
+.main-btn:active {
+  transform: scale(0.96);
+}
+
+.main-btn.light {
+  background: white;
+  color: #ff5f8f;
+}
+
+/* ====== หน้าใส่รหัส ====== */
+.password-card {
+  background: linear-gradient(135deg, #ff8fb3, #ff6f9f);
+  padding: 28px 22px 32px;
+  border-radius: 28px;
+  color: white;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+
+.inputs input {
+  width: 100%;
+  max-width: 44px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ====== คำถาม ====== */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.choices button {
+  padding: 14px;
+  border-radius: 18px;
+  border: none;
+  font-size: 16px;
+  background: #ffe0ec;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.choices button:active {
+  transform: scale(0.96);
+}
+
+/* ====== ผลลัพธ์ ====== */
+.hidden {
+  display: none;
+}
+
+/* ====== จอเล็กมาก (มือถือเก่า) ====== */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .main-img {
+    width: 160px;
+  }
+}
